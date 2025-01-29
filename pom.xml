@@ -13,12 +13,12 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	
-	<repositories>
-		<repository>
+	<pluginRepositories>
+		<pluginRepository>
 		    <id>jitpack.io</id>
 		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
@@ -35,17 +35,16 @@
 			<version>5.10.0</version>
 			<scope>test</scope>
 		</dependency>
-	
-		<dependency>
-	    	<groupId>com.github.chainiDV</groupId>
-	    	<artifactId>TestSmellDetector</artifactId>
-	    	<version>70df48df8d</version>
-		</dependency>
 
 	</dependencies>
 
 	<build>
-		<plugins>
+		<plugins>		
+			<plugin>
+				<groupId>com.github.chainiDV</groupId>
+				<artifactId>TestSmellDetector</artifactId>
+				<version>70df48df8d</version>
+			</plugin>
 			<!-- https://stackoverflow.com/questions/49398894/unable-to-compile-simple-java-10-java-11-project-with-maven -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
